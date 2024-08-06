@@ -1,0 +1,31 @@
+---
+import { Image } from 'astro:assets';
+
+import Base from '../layouts/Base.astro';
+
+import windowsLogo from '../images/windows.svg';
+import macosLogo from '../images/macos.svg';
+import linuxLogo from '../images/linux.svg';
+---
+
+<Base pageTitle="Download">
+  <h2>Download the software</h2>
+  
+  <p>Here you can download the latest version of wiRedPanda binaries.</p>
+
+  <div>
+    <Image src={windowsLogo} alt="Windows button to download" />
+    <Image src={linuxLogo} alt="Linux button to download" />
+    <Image src={macosLogo} alt="MacOS button to download" />
+  </div>
+
+  <p>For some linux distributions you also can get wiRedPanda using your package manager</p>
+
+  <section>
+    <h3>Arch Linux</h3>
+    <code>
+      yay -S wiredpanda-bin
+    </code>
+  </section>
+
+</Base>

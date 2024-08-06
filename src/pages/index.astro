@@ -1,16 +1,27 @@
 ---
-
+import Base from "../layouts/Base.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Base pageTitle="Home">
+  <section>
+    <h1>Learn about logic circuits <br />the easy way</h1>
+    <span>We are proud to present you the new software of your logic circuits class.</span>
+  </section>
+
+  <section>
+    <p>WiredPanda is a powerful and intuitive tool designed to help students, educators and enthusiasts on their journey of learning about digital circuits. With a user-friendly interface and advanced features, WiredPanda transforms the process of understanding and creating circuits into an interactive and engaging experience.</p>
+
+    <h2>Main features</h2>
+    <ul>
+      <li><strong><em>Real-Time Simulation:</em></strong> See your circuits come to life instantly as you make adjustments and experiment with different configurations.</li>
+      <li><strong><em>Intuitive Interface:</em></strong> Drag and drop elements, connect wires and build your circuits simply and efficiently.</li>
+      <li><strong><em>Detailed Analysis:</em></strong> Analyze your circuit with beWavedDolphin, identify and correct problems in your circuits.</li>
+      <li><strong><em>Cross-Platform:</em></strong> Available for Windows, macOS and Linux, ensuring that you can work on your project on any device.</li>
+    </ul>
+    <img src="/demo.gif" alt="Gif of wiRedPanda running">
+
+    <p>We believe that technology education should be accessible, engaging and practical. Our software has been developed to simplify the learning process and allow you to focus on what really matters: understanding and creating digital circuits.</p>
+
+    <p>Download WiredPanda now and start exploring the world of digital circuits. Try out all our features and see how we can help you achieve your goals.Already in use at Federal University of São Paulo, and maybe in your logic circuits class too!</p>
+  </section>
+</Base>
