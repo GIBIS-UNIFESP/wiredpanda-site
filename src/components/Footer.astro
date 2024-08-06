@@ -1,0 +1,12 @@
+---
+import { Image } from "astro:assets";
+
+import unifespLogo from '../images/unifesp.png';
+import gibisLogo from '../images/gibis.png';
+---
+
+<footer>
+  <Image src={unifespLogo} alt="Unifesp logo" />
+  <span>wiRedPanda Team &copy; { new Date().getFullYear() }</span>
+  <Image src={gibisLogo} alt="GIBIS logo" />
+</footer>

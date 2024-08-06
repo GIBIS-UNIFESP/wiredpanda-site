@@ -1,0 +1,19 @@
+---
+import { Image } from "astro:assets";
+
+import pandaLogo from '../images/wpanda.svg';
+---
+
+<header>
+  <div>
+    <Image src={pandaLogo} alt="wiRedPanda Logo" />
+    <span>wiRedPanda</span>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="/">Home</a></li>
+      <li><a href="/about">About</a></li>
+      <li><a href="/download">Download</a></li>
+    </ul>
+  </nav>
+</header>
