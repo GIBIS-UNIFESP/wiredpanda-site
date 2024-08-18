@@ -1,20 +1,58 @@
 ---
+import { Image } from 'astro:assets';
+
 import Base from '../layouts/Base.astro';
+
+import campusUnifesp from '../images/unifesp_campus.png';
 ---
 
 <Base pageTitle="About">
-  <h2>About the project</h2>
+  <section class="center-content">
+    <h2>About the project</h2>
 
-  <p>The project was born in 2015 with Dr. Fábio Cappabianco, Davi Morales, Lucas Lellis and Rodrigo Torres, with the aim of having a software program capable of making the subject of logic circuits easy to learn. Built to be easy to use, today the software is used to teach digital circuits at UNIFESP, as well as in other university project that teaches digital logic to high school students in São José dos Campos public schools.</p>
+    <Image
+      src={campusUnifesp} alt="Unifesp campus" width="600" loading="eager"
+      style="padding: 30px; float: right; border-radius: 40px;" 
+    />
 
-  <p>If you want to report bugs or share with us new ideas, please send us a email at <strong>INSERT EMAIL HERE</strong> or open a discussion on GitHub! Surely we can improve the software with your help.</p>
-  
-  <h3>wiRedPanda Team</h3>
-  <ul>
-    <li>João Pedro Oliveira</li>
-    <li>Matheus Esteves</li>
-    <li>Maycon Santana</li>
-    <li>Rodrigo Torres</li>
-    <li>Prof. Fábio Cappabianco, Ph.D.</li>
-  </ul>
+    <p>The project was born in 2015 with Dr. Fábio Cappabianco, Davi Morales, Lucas Lellis and Rodrigo Torres, with the aim of having a software program capable of making the subject of logic circuits easy to learn, 100% free and cross-platform. Built to be easy to use, today the software is used to teach digital circuits at UNIFESP, as well as in other university project that teaches digital logic to high school students in São José dos Campos public schools.</p>
+
+    <br />
+
+    <p>We're in active development, so if you want to report bugs or share with us new ideas, please open a discussion on GitHub! Surely we can improve the software with your help.</p>
+
+    <div>
+      <h3>wiRedPanda Team</h3>
+      <ul>
+        <li>João Pedro Oliveira</li>
+        <li>Matheus Esteves</li>
+        <li>Maycon Santana</li>
+        <li>Rodrigo Torres</li>
+        <li>Prof. Fábio Cappabianco, Ph.D.</li>
+      </ul>
+    </div>
+  </section>
 </Base>
+
+<style>
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px;
+}
+
+h2 {
+  margin-bottom: 30px;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+ul {
+  margin-top: 10px;
+  text-align: center;
+  line-height: 1.3em;
+}
+</style>

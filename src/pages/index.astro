@@ -1,27 +1,78 @@
 ---
+import { Image } from "astro:assets";
+
 import Base from "../layouts/Base.astro";
+import FeatureCard from "../components/FeatureCard.astro";
+
+import demoGif from '../images/demo.gif';
 ---
 
 <Base pageTitle="Home">
-  <section>
-    <h1>Learn about logic circuits <br />the easy way</h1>
-    <span>We are proud to present you the new software of your logic circuits class.</span>
+  <div class="presentation-image"></div>
+  <section class="presentation">
+    <h1 class="center-content">Learn about logic circuits <br /> the easy way</h1>
+    <span class="center-content">We are proud to present you the new software of your logic circuits class.</span>
   </section>
 
-  <section>
+  <section class="center-content">
     <p>WiredPanda is a powerful and intuitive tool designed to help students, educators and enthusiasts on their journey of learning about digital circuits. With a user-friendly interface and advanced features, WiredPanda transforms the process of understanding and creating circuits into an interactive and engaging experience.</p>
 
     <h2>Main features</h2>
     <ul>
-      <li><strong><em>Real-Time Simulation:</em></strong> See your circuits come to life instantly as you make adjustments and experiment with different configurations.</li>
-      <li><strong><em>Intuitive Interface:</em></strong> Drag and drop elements, connect wires and build your circuits simply and efficiently.</li>
-      <li><strong><em>Detailed Analysis:</em></strong> Analyze your circuit with beWavedDolphin, identify and correct problems in your circuits.</li>
-      <li><strong><em>Cross-Platform:</em></strong> Available for Windows, macOS and Linux, ensuring that you can work on your project on any device.</li>
+      <li><FeatureCard title="Real-Time Simulation" content="See your circuits come to life instantly as you make adjustments and experiment with different configurations." /></li>
+      <li><FeatureCard title="Intuitive Interface" content="Drag and drop elements, connect wires and build your circuits simply and efficiently." /></li>
+      <li><FeatureCard title="Detailed Analysis" content="Analyze your circuit with beWavedDolphin waveform simulator, identify and correct problems in your circuits." /></li>
+      <li><FeatureCard title="Cross-Platform" content="Available for Windows, macOS and Linux, ensuring that you can work on your project on any device." /></li>
     </ul>
-    <img src="/demo.gif" alt="Gif of wiRedPanda running">
+    <Image src={demoGif} alt="Gif of wiRedPanda running" width="1000" style="margin: 40px;" />
 
     <p>We believe that technology education should be accessible, engaging and practical. Our software has been developed to simplify the learning process and allow you to focus on what really matters: understanding and creating digital circuits.</p>
+    <br />
 
-    <p>Download WiredPanda now and start exploring the world of digital circuits. Try out all our features and see how we can help you achieve your goals.Already in use at Federal University of São Paulo, and maybe in your logic circuits class too!</p>
+    <p>Download WiredPanda now and start exploring the world of digital circuits. Try out all our features and see how we can help you achieve your goals. Already in use at Federal University of São Paulo, and maybe in your logic circuits class too!</p>
   </section>
 </Base>
+
+<style>
+.presentation-image {
+  min-height: 100vh;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  background-image: url("../images/demo.gif");
+  background-size: cover;
+  filter: contrast(85%) blur(3px);
+}
+
+.presentation {
+  position: relative;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  color: white;
+  margin-bottom: 100px;
+}
+
+section:nth-child(2) {
+  margin-top: 100px;
+}
+
+h1,
+h2 {
+  font-size: 4em;
+  text-shadow: 1px 1px 1px gray;
+}
+
+ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+</style>

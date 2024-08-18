@@ -6,26 +6,53 @@ import Base from '../layouts/Base.astro';
 import windowsLogo from '../images/windows.svg';
 import macosLogo from '../images/macos.svg';
 import linuxLogo from '../images/linux.svg';
+
+const width = 150;
 ---
 
 <Base pageTitle="Download">
-  <h2>Download the software</h2>
-  
-  <p>Here you can download the latest version of wiRedPanda binaries.</p>
+  <section class="center-content">
+    <h2>Download the software</h2>
+    
+    <p>Here you can download the latest version of wiRedPanda binaries for:</p>
 
-  <div>
-    <Image src={windowsLogo} alt="Windows button to download" />
-    <Image src={linuxLogo} alt="Linux button to download" />
-    <Image src={macosLogo} alt="MacOS button to download" />
-  </div>
-
-  <p>For some linux distributions you also can get wiRedPanda using your package manager</p>
-
-  <section>
-    <h3>Arch Linux</h3>
-    <code>
-      yay -S wiredpanda-bin
-    </code>
+    <div class="download-container">
+      <div class="download-item">
+        <a href="https://github.com/GIBIS-UNIFESP/wiRedPanda/releases/download/v4.1.12/WiRedPanda-Windows-Qt5-Portable.zip">
+          <Image src={windowsLogo} alt="Windows button to download" width={width} />
+          <span>Windows</span>
+        </a>
+      </div>
+      <div class="download-item">
+        <a href="https://github.com/GIBIS-UNIFESP/wiRedPanda/releases/download/v4.1.12/WiRedPanda-Ubuntu-Qt5.AppImage">
+          <Image src={linuxLogo} alt="Linux button to download" width={width} />
+          <span>Linux</span>
+        </a>
+      </div>
+      <div class="download-item">
+        <a href="https://github.com/GIBIS-UNIFESP/wiRedPanda/releases/download/v4.1.12/WiRedPanda-macOS-Qt5.dmg">
+          <Image src={macosLogo} alt="MacOS button to download" width={width} />
+          <span>Mac OS</span>
+        </a>
+      </div>
+    </div>
   </section>
-
 </Base>
+
+<style>
+.download-container {
+  margin: 50px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+a span {
+  padding: 10px;
+}
+</style>

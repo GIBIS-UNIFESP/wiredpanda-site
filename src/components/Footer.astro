@@ -6,7 +6,26 @@ import gibisLogo from '../images/gibis.png';
 ---
 
 <footer>
-  <Image src={unifespLogo} alt="Unifesp logo" />
+  <a href="https://www.unifesp.br/" target="_blank">
+    <Image src={unifespLogo} alt="Unifesp logo" width={125} />
+  </a>
   <span>wiRedPanda Team &copy; { new Date().getFullYear() }</span>
-  <Image src={gibisLogo} alt="GIBIS logo" />
+  <a href="http://gibis.unifesp.br/" target="_blank">
+    <Image src={gibisLogo} alt="GIBIS logo" width={125} />
+  </a>
 </footer>
+
+
+<style>
+footer {
+  display: flex;  
+  align-items: center;
+  justify-content: space-around;
+  background-color: #2290EF;
+  padding: 10px;
+  margin-top: 20px;
+
+  color: white;
+  font-weight: 500;
+}
+</style>

@@ -1,19 +1,84 @@
 ---
 import { Image } from "astro:assets";
 
+import Theme from './Theme.astro';
+
 import pandaLogo from '../images/wpanda.svg';
+import githubLogo from '../images/github.svg';
 ---
 
 <header>
   <div>
-    <Image src={pandaLogo} alt="wiRedPanda Logo" />
+    <Image src={pandaLogo} alt="wiRedPanda Logo" width={100} loading="eager" />
     <span>wiRedPanda</span>
   </div>
   <nav>
     <ul>
+      <!-- <li><Theme /></li> -->
       <li><a href="/">Home</a></li>
       <li><a href="/about">About</a></li>
       <li><a href="/download">Download</a></li>
+      <li><a href="#">Try out</a></li>
+      <li>
+        <a href="https://github.com/GIBIS-UNIFESP/wiRedPanda" target="_blank" class="github">
+          <Image src={githubLogo} alt="Github repository link" width={35} loading="eager"/>
+        </a>
+      </li>
     </ul>
   </nav>
 </header>
+
+<style>
+header {
+  display: flex;
+  align-content: space-between;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 15vh;
+
+  background-color: #2290EF;
+  color: white;
+}
+
+div {
+  display: flex;
+  align-items: center;
+}
+
+span {
+  padding: 10px;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+}
+
+li {
+  padding: 10px;
+}
+
+a {
+  color: white;
+  font-weight: 600;
+}
+
+li:hover:not(:last-child) {
+  font-weight: 600;
+  text-shadow: 1px 1px 15px darkgreen;
+  animation: blink 0.15s linear 2;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+
+  25%, 75% {
+    opacity: 0;
+  }
+}
+
+</style>

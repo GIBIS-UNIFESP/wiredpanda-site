@@ -1,0 +1,27 @@
+---
+import { Image } from 'astro:assets';
+
+import ledOff from '../images/LedOff.svg';
+// import ledOn from '../images/WhiteLed.svg';
+
+let currentIcon = ledOff;
+
+// function toggleIcon() {
+//   currentIcon = (currentIcon === ledOff) ? ledOn : ledOff;
+// }
+---
+
+<Image src={currentIcon} alt='Theme selector' width={35} class="toggleIcon" />
+
+<style>
+
+img {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+img:active {
+  transform: scale(1.1);
+}
+
+</style>
