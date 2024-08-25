@@ -3,21 +3,19 @@ import { Image } from 'astro:assets';
 
 import Base from '../layouts/Base.astro';
 
-import campusUnifesp from '../images/unifesp_campus.png';
+import campusUnifesp from '../images/unifesp_campus.webp';
 ---
 
 <Base pageTitle="About">
-  <section class="center-content">
+  <section>
     <h2>About the project</h2>
-
-    <Image
-      src={campusUnifesp} alt="Unifesp campus" width="600" loading="eager"
-      style="padding: 30px; float: right; border-radius: 40px;" 
-    />
 
     <p>The project was born in 2015 with Dr. Fábio Cappabianco, Davi Morales, Lucas Lellis and Rodrigo Torres, with the aim of having a software program capable of making the subject of logic circuits easy to learn, 100% free and cross-platform. Built to be easy to use, today the software is used to teach digital circuits at UNIFESP, as well as in other university project that teaches digital logic to high school students in São José dos Campos public schools.</p>
 
-    <br />
+    <Image
+      src={campusUnifesp} alt="Unifesp campus" width="600" loading="eager"
+      style="padding: 30px; border-radius: 40px; margin: 0 300px;" 
+    />
 
     <p>We're in active development, so if you want to report bugs or share with us new ideas, please open a discussion on GitHub! Surely we can improve the software with your help.</p>
 
@@ -33,26 +31,3 @@ import campusUnifesp from '../images/unifesp_campus.png';
     </div>
   </section>
 </Base>
-
-<style>
-div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 40px;
-}
-
-h2 {
-  margin-bottom: 30px;
-}
-
-h3 {
-  font-size: 1.5em;
-}
-
-ul {
-  margin-top: 10px;
-  text-align: center;
-  line-height: 1.3em;
-}
-</style>

@@ -1,8 +1,8 @@
 ---
 import { Image } from "astro:assets";
 
-import unifespLogo from '../images/unifesp.png';
-import gibisLogo from '../images/gibis.png';
+import unifespLogo from '../images/unifesp.webp';
+import gibisLogo from '../images/gibis.webp';
 ---
 
 <footer>
@@ -14,18 +14,3 @@ import gibisLogo from '../images/gibis.png';
     <Image src={gibisLogo} alt="GIBIS logo" width={125} />
   </a>
 </footer>
-
-
-<style>
-footer {
-  display: flex;  
-  align-items: center;
-  justify-content: space-around;
-  background-color: #2290EF;
-  padding: 10px;
-  margin-top: 20px;
-
-  color: white;
-  font-weight: 500;
-}
-</style>

@@ -3,33 +3,33 @@ import { Image } from 'astro:assets';
 
 import Base from '../layouts/Base.astro';
 
-import windowsLogo from '../images/windows.svg';
-import macosLogo from '../images/macos.svg';
-import linuxLogo from '../images/linux.svg';
+import windowsLogo from '../images/platforms/windows.svg';
+import macosLogo from '../images/platforms/macos.svg';
+import linuxLogo from '../images/platforms/linux.svg';
 
 const width = 150;
 ---
 
 <Base pageTitle="Download">
-  <section class="center-content">
+  <section>
     <h2>Download the software</h2>
     
     <p>Here you can download the latest version of wiRedPanda binaries for:</p>
 
-    <div class="download-container">
-      <div class="download-item">
+    <div>
+      <div>
         <a href="https://github.com/GIBIS-UNIFESP/wiRedPanda/releases/download/v4.1.12/WiRedPanda-Windows-Qt5-Portable.zip">
           <Image src={windowsLogo} alt="Windows button to download" width={width} />
           <span>Windows</span>
         </a>
       </div>
-      <div class="download-item">
+      <div>
         <a href="https://github.com/GIBIS-UNIFESP/wiRedPanda/releases/download/v4.1.12/WiRedPanda-Ubuntu-Qt5.AppImage">
           <Image src={linuxLogo} alt="Linux button to download" width={width} />
           <span>Linux</span>
         </a>
       </div>
-      <div class="download-item">
+      <div>
         <a href="https://github.com/GIBIS-UNIFESP/wiRedPanda/releases/download/v4.1.12/WiRedPanda-macOS-Qt5.dmg">
           <Image src={macosLogo} alt="MacOS button to download" width={width} />
           <span>Mac OS</span>
@@ -38,21 +38,3 @@ const width = 150;
     </div>
   </section>
 </Base>
-
-<style>
-.download-container {
-  margin: 50px;
-  display: flex;
-  justify-content: space-evenly;
-}
-
-a {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-a span {
-  padding: 10px;
-}
-</style>
