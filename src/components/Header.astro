@@ -1,22 +1,25 @@
 ---
 import { Image } from "astro:assets";
 
+import Theme from "./Theme.astro";
+
 import pandaLogo from '../images/wpanda.svg';
-import githubLogo from '../images/github.webp';
+import githubLogo from '../images/github.svg';
 ---
 
-<header>
-  <div>
+<header class="is-flex is-flex-direction-row is-justify-content-space-around background-color">
+  <div class="navbar background-color">
     <Image src={pandaLogo} alt="wiRedPanda Logo" width={100} loading="eager" />
-    <span>wiRedPanda</span>
+    <span class="navbar-item">wiRedPanda</span>
   </div>
-  <nav>
-    <ul>
-      <li><a href="/wiredpanda-site/">Home</a></li>
-      <li><a href="/wiredpanda-site/about">About</a></li>
-      <li><a href="/wiredpanda-site/download">Download</a></li>
-      <li><a href="#">Try out</a></li>
-      <li>
+  <nav class="navbar background-color">
+    <ul class="navbar-menu">
+      <li class="navbar-item"><Theme /></li>
+      <li class="navbar-item"><a href="/wiredpanda-site/">Home</a></li>
+      <li class="navbar-item"><a href="/wiredpanda-site/about">About</a></li>
+      <li class="navbar-item"><a href="/wiredpanda-site/download">Download</a></li>
+      <li class="navbar-item"><a href="#">Try out</a></li>
+      <li class="navbar-item">
         <a href="https://github.com/GIBIS-UNIFESP/wiRedPanda" target="_blank" class="github">
           <Image src={githubLogo} alt="Github repository link" width={35} loading="eager"/>
         </a>
@@ -24,3 +27,38 @@ import githubLogo from '../images/github.webp';
     </ul>
   </nav>
 </header>
+
+<style>
+header {
+  padding: 10px;
+}
+
+li {
+  padding: 10px;
+}
+
+a,
+span {
+  color: white;
+}
+
+span {
+  font-weight: 500;
+}
+
+li:hover:not(:first-child, :last-child) {
+  font-weight: 600;
+  text-shadow: 1px 1px 15px darkgreen;
+  animation: blink 0.15s linear 2;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+
+  25%, 75% {
+    opacity: 0;
+  }
+}
+</style>

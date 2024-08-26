@@ -1,1 +1,27 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Moderustic:wght@300..800&display=swap');
+
+@import './flicker-animation.css';
+@import './jello-animation.css';
+@import './infinite-background.css';
+
+* {
+  font-family: "Moderustic", Helvetica, sans-serif;
+  font-size: 22px;
+}
+
+*::selection {
+  color: white;
+  background-color: #BD2812;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+.background-color {
+  background-color: #2281D3;
+}
