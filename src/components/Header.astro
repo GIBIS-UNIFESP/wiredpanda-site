@@ -1,7 +1,7 @@
 ---
 import { Image } from "astro:assets";
 
-import Theme from "./Theme.astro";
+// import Theme from "./Theme.astro";
 
 import pandaLogo from '../images/wpanda.svg';
 import githubLogo from '../images/github.svg';
@@ -14,11 +14,11 @@ import githubLogo from '../images/github.svg';
   </div>
   <nav class="navbar background-color">
     <ul class="navbar-menu">
-      <li class="navbar-item"><Theme /></li>
+      <!-- <li class="navbar-item"><Theme /></li> -->
       <li class="navbar-item"><a href="/wiredpanda-site/">Home</a></li>
       <li class="navbar-item"><a href="/wiredpanda-site/about">About</a></li>
       <li class="navbar-item"><a href="/wiredpanda-site/download">Download</a></li>
-      <li class="navbar-item"><a href="#">Try out</a></li>
+      <li class="navbar-item"><a href="https://gibis-unifesp.github.io/wiRedPanda/wasm/">Try out</a></li>
       <li class="navbar-item">
         <a href="https://github.com/GIBIS-UNIFESP/wiRedPanda" target="_blank" class="github">
           <Image src={githubLogo} alt="Github repository link" width={35} loading="eager"/>
@@ -46,7 +46,7 @@ span {
   font-weight: 500;
 }
 
-li:hover:not(:first-child, :last-child) {
+li:hover:not(:last-child) {
   font-weight: 600;
   text-shadow: 1px 1px 15px darkgreen;
   animation: blink 0.15s linear 2;
