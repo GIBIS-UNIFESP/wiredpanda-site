@@ -1,27 +1,23 @@
 ---
+import { Icon } from "astro-icon/components";
 import { Image } from "astro:assets";
 
-// import Theme from "./Theme.astro";
-
 import pandaLogo from '../images/wpanda.svg';
-import githubLogo from '../images/github.svg';
 ---
-
-<header class="is-flex is-flex-direction-row is-justify-content-space-around background-color">
-  <div class="navbar background-color">
-    <Image src={pandaLogo} alt="wiRedPanda Logo" width={100} loading="eager" />
+<header class="is-flex is-flex-direction-row is-justify-content-space-between">
+  <div class="navbar ml-5 mt-3">
+    <Image src={pandaLogo} alt="wiRedPanda Logo" width={90} loading="eager" class="pandalogo"/>
     <span class="navbar-item">wiRedPanda</span>
   </div>
-  <nav class="navbar background-color">
+  <nav class="navbar mr-5 mt-3">
     <ul class="navbar-menu">
-      <!-- <li class="navbar-item"><Theme /></li> -->
       <li class="navbar-item"><a href="/wiredpanda-site/">Home</a></li>
       <li class="navbar-item"><a href="/wiredpanda-site/about">About</a></li>
       <li class="navbar-item"><a href="/wiredpanda-site/download">Download</a></li>
       <li class="navbar-item"><a href="https://gibis-unifesp.github.io/wiRedPanda/wasm/">Try out</a></li>
       <li class="navbar-item">
         <a href="https://github.com/GIBIS-UNIFESP/wiRedPanda" target="_blank" class="github">
-          <Image src={githubLogo} alt="Github repository link" width={35} loading="eager"/>
+          <Icon name="github" style="font-size: 3.5rem;"/>
         </a>
       </li>
     </ul>
@@ -31,6 +27,11 @@ import githubLogo from '../images/github.svg';
 <style>
 header {
   padding: 10px;
+  min-width: 100vw;
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 li {
@@ -52,6 +53,16 @@ li:hover:not(:last-child) {
   animation: blink 0.15s linear 2;
 }
 
+div,
+nav {
+  border: 1.4px solid #2DA6F4;
+  border-radius: 40px;
+  background-color: rgba(1,1,1, 0.5);
+  backdrop-filter: blur(6px);
+  padding: 10px;
+  box-shadow: 1px 1px 50px black;
+}
+
 @keyframes blink {
   0%, 100% {
     opacity: 1;
@@ -62,3 +73,17 @@ li:hover:not(:last-child) {
   }
 }
 </style>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+       if (entry.isIntersecting) {
+          entry.target.classList.add("bounce-in-top");
+       }
+    });
+});
+
+observer.observe(document.getElementsByTagName('div')[0]);
+observer.observe(document.getElementsByTagName('nav')[0]);
+observer.observe(document.getElementsByClassName('pandalogo')[0]);
+</script>
