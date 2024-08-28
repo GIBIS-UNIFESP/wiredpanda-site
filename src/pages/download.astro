@@ -1,13 +1,7 @@
 ---
-import { Image } from 'astro:assets';
+import { Icon } from 'astro-icon/components';
 
 import Base from '../layouts/Base.astro';
-
-import windowsLogo from '../images/platforms/windows.svg';
-import macosLogo from '../images/platforms/macos.svg';
-import linuxLogo from '../images/platforms/linux.svg';
-
-const width = 150;
 ---
 
 <Base pageTitle="Download">
@@ -18,20 +12,23 @@ const width = 150;
 
     <div class="is-flex is-justify-content-space-around">
       <div>
-        <a class="is-flex is-flex-direction-column" href="https://github.com/GIBIS-UNIFESP/wiRedPanda/releases/download/v4.1.12/WiRedPanda-Windows-Qt5-Portable.zip">
-          <Image src={windowsLogo} alt="Windows button to download" width={width} class="jello-diagonal-1" />
+        <a class="is-flex is-flex-direction-column" 
+          href="https://github.com/GIBIS-UNIFESP/wiRedPanda/releases/download/v4.1.12/WiRedPanda-Windows-Qt5-Portable.zip">
+          <Icon name="platforms/windows" />
           <span>Windows</span>
         </a>
       </div>
       <div>
-        <a class="is-flex is-flex-direction-column" href="https://github.com/GIBIS-UNIFESP/wiRedPanda/releases/download/v4.1.12/WiRedPanda-Ubuntu-Qt5.AppImage">
-          <Image src={linuxLogo} alt="Linux button to download" width={width} class="jello-diagonal-1"/>
+        <a class="is-flex is-flex-direction-column" 
+          href="https://github.com/GIBIS-UNIFESP/wiRedPanda/releases/download/v4.1.12/WiRedPanda-Ubuntu-Qt5.AppImage">
+          <Icon name="platforms/linux" />
           <span>Linux</span>
         </a>
       </div>
       <div>
-        <a class="is-flex is-flex-direction-column" href="https://github.com/GIBIS-UNIFESP/wiRedPanda/releases/download/v4.1.12/WiRedPanda-macOS-Qt5.dmg">
-          <Image src={macosLogo} alt="MacOS button to download" width={width} class="jello-diagonal-1"/>
+        <a class="is-flex is-flex-direction-column" 
+          href="https://github.com/GIBIS-UNIFESP/wiRedPanda/releases/download/v4.1.12/WiRedPanda-macOS-Qt5.dmg">
+          <Icon name="platforms/macos" />
           <span>Mac OS</span>
         </a>
       </div>
