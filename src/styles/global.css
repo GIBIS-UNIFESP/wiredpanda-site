@@ -1,6 +1,8 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@1.0.2/css/bulma.min.css";
 @import url('https://fonts.googleapis.com/css2?family=Moderustic:wght@300..800&display=swap');
 
+@import './tiltin-animation.css';
+@import './bouncein-animation.css';
 @import './flicker-animation.css';
 @import './jello-animation.css';
 @import './infinite-background.css';
@@ -23,5 +25,5 @@ body {
 }
 
 .background-color {
-  background-color: #2281D3;
+  background-color: #134074;
 }

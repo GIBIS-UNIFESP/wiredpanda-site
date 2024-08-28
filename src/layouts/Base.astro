@@ -15,6 +15,7 @@ const { pageTitle } = Astro.props;
     <link rel="icon" type="image/ico" href="/wpanda.ico" />
 		<meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <script is:inline defer src="https://kit.fontawesome.com/1b8f56875d.js" crossorigin="anonymous"></script>
     <ViewTransitions />
     <title>Panda | {pageTitle}</title>
 	</head>
@@ -26,3 +27,9 @@ const { pageTitle } = Astro.props;
     <Footer />
 	</body>
 </html>
+
+<style>
+main {
+  padding-top: 12%;
+}
+</style>
