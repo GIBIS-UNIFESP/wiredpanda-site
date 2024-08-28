@@ -10,47 +10,47 @@ import Base from '../layouts/Base.astro';
     
     <p>Here you can download the latest version of wiRedPanda binaries for:</p>
 
-    <div class="is-flex is-justify-content-space-around" style="border: 1.4px solid #2DA6F4; border-radius: 40px; background-color: rgba(1,1,1, 0.5); backdrop-filter: blur(6px); padding: 10px; margin-bottom: 20px; box-shadow: 1px 1px 50px black;">
+    <div class="is-flex is-justify-content-space-around p-6" style="border: 1.4px solid #134074; border-radius: 40px; background-color: rgba(1,1,1, 0.1); backdrop-filter: blur(6px); padding: 10px; margin-bottom: 20px; box-shadow: 1px 1px 50px black;">
       <div>
         <a class="is-flex is-flex-direction-column" 
           href="https://github.com/GIBIS-UNIFESP/wiRedPanda/releases/download/v4.1.12/WiRedPanda-Windows-Qt5-Portable.zip">
           <Icon name="platforms/windows" class='icon'/>
-          <span style="color: #2DA6F4;">Windows</span>
+          <span style="color: #134074;">Windows</span>
         </a>
       </div>
       <div>
         <a class="is-flex is-flex-direction-column" 
           href="https://github.com/GIBIS-UNIFESP/wiRedPanda/releases/download/v4.1.12/WiRedPanda-Ubuntu-Qt5.AppImage">
           <Icon name="platforms/linux" class='icon'/>
-          <span style="color: #2DA6F4;">Linux</span>
+          <span style="color: #134074;">Linux</span>
         </a>
       </div>
       <div>
         <a class="is-flex is-flex-direction-column" 
           href="https://github.com/GIBIS-UNIFESP/wiRedPanda/releases/download/v4.1.12/WiRedPanda-macOS-Qt5.dmg">
           <Icon name="platforms/macos" class='icon'/>
-          <span style="color: #2DA6F4;">Mac OS</span>
+          <span style="color: #134074;">Mac OS</span>
         </a>
       </div>
     </div>
     
     <h2>Other Options</h2>
 
-    <div style="border: 1.4px solid #2DA6F4; border-radius: 40px; background-color: rgba(1,1,1, 0.5); backdrop-filter: blur(6px); padding: 10px; box-shadow: 1px 1px 50px black; margin-bottom: 30px;">
+    <div style="border: 1.4px solid #134074; border-radius: 40px; background-color: rgba(1,1,1, 0.1); backdrop-filter: blur(6px); padding: 10px; box-shadow: 1px 1px 50px black; margin-bottom: 50px;">
       <div class="option-container">
         <a class="is-flex is-flex-direction-column">
           <Icon name="platforms/archLinux" class='icon'/>
-          <span>Arch</span>
+          <span style="color: #134074;">Arch</span>
         </a>
-        <div class="command-box">&gt; sudo pacman -S wiredpanda</div> 
+        <div class="command-box p-3">&gt; sudo pacman -S wiredpanda</div> 
       </div>
 
       <div class="option-container">
         <a class="is-flex is-flex-direction-column">
           <Icon name="platforms/nixos" class='icon'/>
-          <span>NixOS</span>
+          <span style="color: #134074;">NixOS</span>
         </a>
-        <div class="command-box">&gt; programs.wiredpanda.enable</div>
+        <div class="command-box p-3">&gt; programs.wiredpanda.enable</div>
       </div>
     </div>
   </section>
@@ -75,7 +75,7 @@ import Base from '../layouts/Base.astro';
   .command-box {
     margin-left: 30px; 
     padding: 5px 10px;
-    border: 1.4px solid #2DA6F4; 
+    border: 1.4px solid #134074; 
     border-radius: 40px; 
     color: white; 
     font-family: monospace; 
