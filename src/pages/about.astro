@@ -8,37 +8,32 @@ import campusUnifesp from '../images/unifesp_campus.webp';
 
 <Base pageTitle="About">
   <section class="container content">
-    <h2 class="title is-2 has-text-centered my-6">About the project</h2>
+    <h2 class="title is-1 has-text-centered my-6">About the project</h2>
 
-    <p class="has-text-justified">The project was born in 2015 with Dr. Fábio Cappabianco, Davi Morales, Lucas Lellis and Rodrigo Torres, with the aim of having a software program capable of making the subject of logic circuits easy to learn, 100% free and cross-platform. Built to be easy to use, today the software is used to teach digital circuits at UNIFESP, as well as in other university project that teaches digital logic to high school students in São José dos Campos public schools.</p>
+    <p class="has-text-justified pb-6">The project was born in 2015 with Dr. Fábio Cappabianco, Davi Morales, Lucas Lellis and Rodrigo Torres, with the aim of having a software program capable of making the subject of logic circuits easy to learn, 100% free and cross-platform. Built to be easy to use, today the software is used to teach digital circuits at UNIFESP, as well as in other university project that teaches digital logic to high school students in São José dos Campos public schools.</p>
+  
+    <div class="has-text-centered">
+      <Image
+        src={campusUnifesp} alt="Unifesp campus" width="600" loading="eager"
+        class="jello-diagonal-1 image is-inline-block"
+        style="border-radius: 30px; border: 1.8px solid #134074; box-shadow: 1px 1px 15px black;" 
+      />
+    </div>
 
-    <Image
-      src={campusUnifesp} alt="Unifesp campus" width="600" loading="eager"
-      style="padding: 30px; border-radius: 40px; margin: 0 300px;" 
-      class="jello-diagonal-1"
-    />
+    <p class="pt-6">We're in active development, so if you want to report bugs or share with us new ideas, please open a discussion on GitHub! Surely we can improve the software with your help.</p>
 
-    <p>We're in active development, so if you want to report bugs or share with us new ideas, please open a discussion on GitHub! Surely we can improve the software with your help.</p>
-
-    <div class="team my-6">
-      <h3 class="title is-2 pl-6">wiRedPanda Team</h3>
-      <ul>
+      <h3 class="title has-text-centered is-2">wiRedPanda Team</h3>
+      <ul class="has-text-centered mb-6 pr-6">
         <li>João Pedro Oliveira</li>
         <li>Matheus Esteves</li>
         <li>Maycon Santana</li>
         <li>Rodrigo Torres</li>
         <li>Prof. Fábio Cappabianco, Ph.D.</li>
       </ul>
-    </div>
   </section>
 </Base>
 
 <style>
-
-.team {
-  text-align: center;
-}
-
 ul {
   list-style-type: none;
 }
