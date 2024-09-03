@@ -4,6 +4,11 @@ import { Image } from 'astro:assets';
 import Base from '../layouts/Base.astro';
 
 import campusUnifesp from '../images/unifesp_campus.webp';
+
+const formerDevs = [ 
+  'André Leiniö', 'Daniel Renato', 'Guilherme Costa', 'Gustavo Oliveira', 'Héctor Castelli', 'Ivan Borgia Dardi',
+  'Jimy Suenaga', 'Johnny Michael', 'Lucas A. R. Pinheiro', 'Lucas Shinoda', 'Rodrigo Ramires', 'Thales Koba'
+];
 ---
 
 <Base pageTitle="About">
@@ -29,7 +34,16 @@ import campusUnifesp from '../images/unifesp_campus.webp';
         <li>Maycon Santana</li>
         <li>Rodrigo Torres</li>
         <li>Prof. Fábio Cappabianco, Ph.D.</li>
+    </ul>
+
+    <h3 class="title has-text-centered is-3">Former Developers</h3>
+    <div class="box fixed-grid my-6">
+      <ul class="grid content">
+        { formerDevs.map((dev) => (
+          <li class="cell has-text-centered p-2">{dev}</li>
+        ))}
       </ul>
+    </div>
   </section>
 </Base>
 
