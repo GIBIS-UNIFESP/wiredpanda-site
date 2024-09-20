@@ -2,6 +2,8 @@
 import { Icon } from 'astro-icon/components';
 
 import Base from '../layouts/Base.astro';
+
+import DownloadPlatform from '../components/DownloadPlatform.astro';
 ---
 
 <Base pageTitle="Download">
@@ -37,13 +39,8 @@ import Base from '../layouts/Base.astro';
     <h2>Other Options</h2>
 
     <div class="box is-inline-block m-6">
-      <div class="is-flex is-align-items-center is-justify-content-center p-5">
-        <div class="is-flex is-flex-direction-column">
-          <Icon name="platforms/arch" class='icon'/>
-          <span class="pt-3">Arch</span>
-        </div>
-        <code class="command-box p-3">$ yay -S wiredpanda</code> 
-      </div>
+      <DownloadPlatform platform="arch" platformName="Arch-based" installCommand="yay -S wiredpanda" />
+      <DownloadPlatform platform="debian" platformName="Debian-based" installCommand="apt install wiredpanda" />
     </div>
   </section>
 </Base>
@@ -58,18 +55,6 @@ import Base from '../layouts/Base.astro';
 .icon:hover {
   color: #BD2812;
 }
-
-.command-box {
-  margin-left: 30px; 
-  border-radius: 20px; 
-  color: white; 
-  font-family: monospace; 
-  font-size: large;
-  font-style: italic;
-  background-color: rgba(0.1, 0.1, 0.1, 0.4);
-  backdrop-filter: blur(5px);
-}
-
 .box {
   border: 1.4px solid #134074;
   border-radius: 20px;
