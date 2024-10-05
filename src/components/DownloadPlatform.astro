@@ -9,7 +9,7 @@ const { platform, platformName, installCommand } = Astro.props;
     <Icon name=`platforms/${platform}` class='icon'/>
     <span class="pt-3">{platformName}</span>
   </div>
-  <code class="command-box p-3">$ {installCommand}</code>
+  <code class="p-3 is-flex is-justify-content-space-between">$ {installCommand} </code>
 </div>
 
 <style>
@@ -24,18 +24,41 @@ const { platform, platformName, installCommand } = Astro.props;
 }
 
 .platform {
-  width: 10vw;
+  width: 15vw;
 }
 
-.command-box {
-  width: 15vw;
+code {
+  width: 19vw;
   margin-left: 30px; 
   border-radius: 10px; 
   color: white; 
   font-family: monospace; 
   font-size: large;
   font-style: italic;
+  text-align: left;
   background-color: rgba(0.1, 0.1, 0.1, 0.4);
   backdrop-filter: blur(5px);
 }
+
+code:hover {
+  cursor: pointer;
+  font-weight: 500;
+}
+
 </style>
+
+<script>
+  const codes = document.querySelectorAll('code');
+
+  codes.forEach((code) => {
+    code.addEventListener('click', () => {
+      navigator.clipboard.writeText(code.innerText).then(() => {
+        const text = code.innerText;
+        code.innerText = 'Copied!'
+        setTimeout(() => {
+          code.innerText = text;
+        }, 500);
+      });
+    })
+  });
+</script>
