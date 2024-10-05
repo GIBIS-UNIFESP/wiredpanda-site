@@ -6,3 +6,10 @@ const { title, content } = Astro.props;
   <h3 class="title is-3">{title}</h3>
   <span>{content}</span>
 </div>
+
+<style>
+.box:hover {
+  transition: box-shadow 0.5s;
+  box-shadow: 5px 5px 15px #BD2812;
+}
+</style>

@@ -13,20 +13,13 @@ import pandaLogo from '../images/wpanda.svg';
     <ul class="navbar-menu">
       <li class="navbar-item"><a href="/wiredpanda-site/">Home</a></li>
       <li class="navbar-item"><a href="/wiredpanda-site/about">About</a></li>
-      <!-- <li class="navbar-item"><a href="/wiredpanda-site/docs">Documentation 🏗️</a></li> -->
       <li class="navbar-item"><a href="/wiredpanda-site/download">Download</a></li>
-      <!-- <li class="navbar-item"><a href="/wiredpanda-site/projects">Projects 🏗️</a></li> -->
       <li class="navbar-item"><a href="https://gibis-unifesp.github.io/wiRedPanda/wasm/">Try out</a></li>
       <li class="navbar-item">
         <a href="https://github.com/GIBIS-UNIFESP/wiRedPanda" target="_blank" class="github">
           <Icon name="github" style="font-size: 3.5rem;"/>
         </a>
       </li>
-      <!-- <li class="navbar-item" style="position: relative;"> -->
-      <!--   <button id="language-button" class="language-button"> -->
-      <!--     <Icon name="countries/unitedstates" style="font-size: 3.5rem;" /> -->
-      <!--   </button> -->
-      <!-- </li> -->
     </ul>
   </nav>
 </header>
@@ -81,17 +74,3 @@ nav {
   }
 }
 </style>
-
-<script>
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-       if (entry.isIntersecting) {
-          entry.target.classList.add("bounce-in-top");
-       }
-    });
-});
-
-observer.observe(document.getElementsByTagName('div')[0]);
-observer.observe(document.getElementsByTagName('nav')[0]);
-observer.observe(document.getElementsByClassName('pandalogo')[0]);
-</script>
