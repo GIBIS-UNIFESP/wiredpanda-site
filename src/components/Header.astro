@@ -5,11 +5,11 @@ import { Image } from "astro:assets";
 import pandaLogo from '../images/wpanda.svg';
 ---
 <header class="is-flex is-flex-direction-row is-justify-content-space-between">
-  <div class="navbar ml-5 mt-3">
+  <div class="navbar m-3">
     <Image src={pandaLogo} alt="wiRedPanda Logo" width={40} loading="eager" class="pandalogo"/>
     <span class="navbar-item">wiRedPanda</span>
   </div>
-  <nav class="navbar mr-5 mt-3">
+  <nav class="navbar m-3">
     <ul class="navbar-menu">
       <li class="navbar-item"><a href="/wiredpanda-site/">Home</a></li>
       <li class="navbar-item"><a href="/wiredpanda-site/about">About</a></li>
@@ -26,7 +26,7 @@ import pandaLogo from '../images/wpanda.svg';
 
 <style>
 header {
-  padding: 10px;
+  padding: 7px;
   min-width: 100vw;
   z-index: 2;
   position: fixed;
@@ -61,10 +61,10 @@ li:hover:not(:last-child) {
 div,
 nav {
   border: 1.4px solid #134074;
-  border-radius: 20px;
+  border-radius: 10px;
   background-color: rgba(1,1,1, 0.5);
   backdrop-filter: blur(6px);
-  padding: 10px;
+  padding: 5px 10px;
   box-shadow: 1px 1px 50px black;
 }
 

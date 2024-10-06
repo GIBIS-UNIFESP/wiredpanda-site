@@ -36,9 +36,14 @@ import panda2 from '../images/panda/panda2.png';
         </li>
       </ul>
     </div>
-
+  
+    <center>
+      <video autoplay muted loop class="my-6">
+        <source src="/wiredpanda-site/demo.mp4" type="video/mp4" />
+      </video>
+    </center>
    
-    <div class="is-flex">
+    <div class="is-flex mt-6">
       <p class="is-align-content-center">We believe that technology education should be accessible, engaging and practical. Our software has been developed to simplify the learning process and allow you to focus on what really matters: understanding and creating digital circuits.</p>
       <Image src={panda1} alt="Gif of wiRedPanda running" width="600" height="500" style="margin-left: 40px; margin-bottom: 30px; border-radius: 10px; border: 1.4px solid #134074; box-shadow: 1px 1px 15px black;" loading="eager" />
     </div>
@@ -57,5 +62,12 @@ import panda2 from '../images/panda/panda2.png';
 
 ul {
   list-style-type: none;
+}
+
+video {
+  width: 65vw;
+  border-radius: 10px;
+  border: 1.4px solid #134074;
+  box-shadow: 1px 1px 15px black;
 }
 </style>
